@@ -1,0 +1,69 @@
+{% extends 'nik-app/base.html' %}
+
+{%  block content%}
+
+<br/>
+
+<div class="row">
+    <div class="col">
+        <div class="col-md">
+            <div class="card mb-3" style="background-color: #f0f0f0;">
+                <div class="card-header ">
+                    <h5 class="card-title ">Customer : </h5>
+                </div>
+                <div class="card-header">
+                    <h3 class="card-title">{{user}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="col-md">
+            <div class="card mb-3" style="background-color: #f0f0f0;">
+                <div class="card-header">
+                    <h5 class="card-title">Contact Information : </h5>
+                </div>
+                <div class="card-header">
+                    {% for i in customer %}
+                    <h6 class="card-title">Email :  {{i.email}}</h6>
+                    <h6 class="card-title"> Phone :  {{i.phone}}</h6>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="col-md">
+            <div class="card text-center mb-3" style="background-color: #f0f0f0;">
+                <div class="card-header">
+                    <h5 class="card-title">Total Orders : </h5>
+                </div>
+                <div class="card-header">
+                    <h3 class="card-title">{{totalOrder}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <table class="table table-sm text-center">
+            <tr class="text-white bg-secondary">
+                <th>Order ID</th>
+                <th>Product Name</th>
+                <th>Product Status</th>
+                <th>Order Date</th>
+            </tr>
+            {% for itm in order %}
+            <tr>
+                <td>{{itm.id}}</td>
+                <td>{{itm.product}}</td>
+                <td>{{itm.status}}</td>
+                <td>{{itm.date_created}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+
+{% endblock %}

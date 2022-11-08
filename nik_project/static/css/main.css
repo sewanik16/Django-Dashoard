@@ -1,0 +1,13 @@
+
+#total-orders{
+    background-color:rgb(247, 212, 166);
+}
+#out_for_delivery{
+    background-color: rgb(185, 156, 111);
+}
+#orders-delivered{
+    background-color:rgb(126, 212, 212);
+}
+#orders-pending{
+    background-color:rgb(161, 126, 82);
+}
