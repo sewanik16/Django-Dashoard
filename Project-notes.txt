@@ -1,0 +1,43 @@
+python --version
+pip --version
+
+Set Environment:
+install virtual environment : python -m venv nik-env 
+Activate the environment  : nik-env\Scripts\activate.bat
+
+install Django:
+> python- m pip install django
+> django-admin --version
+
+create Project:
+> django-admin startproject nik_project
+> cd nik_project
+> python manage.py runserver
+
+create App:
+> python manage.py startapp nik_app
+
+nik_project >> setting.py
+Some settings and Create Folder:(template and static folder)
+template folder : nik_app
+static folder : css,js,image
+
+
+template folder:
+add base.html >> include bootstrap link for css and js
+
+
+.
+.
+.
+
+models.py>> 
+create models : python manage.py makemigrations
+create tables : python manage.py migrate
+
+
+create superuser: python manage.py createsuperuser
+
+
+
+
